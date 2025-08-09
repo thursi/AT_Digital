@@ -17,7 +17,7 @@ const DigitalStrategyCard = () => {
             provide a clear concept and strategic overview to find the most
             efficient model for your business.
           </p>
-          <button className="bg-[#F28D35] hover:bg-orange-600 text-white px-5 py-2 rounded-md text-sm font-medium transition-colors duration-300 w-full sm:w-auto max-w-xs mx-auto lg:mx-0">
+          <button className="bg-[#F28D35] hover:bg-orange-600 text-white px-6 py-2 rounded-md text-sm font-medium transition-colors duration-300 w-full sm:w-48 md:w-36 mx-auto md:mx-0 lg:mx-0">
             LEARN MORE
           </button>
         </div>
