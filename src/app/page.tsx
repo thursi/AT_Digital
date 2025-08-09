@@ -10,17 +10,11 @@ export default function Home() {
       <div className="w-full">
         <HomeHero />
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
-        <div>
-          <WebAppDevelopmentCard />
-        </div>
-        <div>
-          <DigitalStrategyCard />
-        </div>
-        <div className="mt-8 md:mt-12 ">
-          <FAQ />
-        </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+        <WebAppDevelopmentCard />
+        <DigitalStrategyCard />
       </div>
+      <FAQ />
     </main>
   );
 }

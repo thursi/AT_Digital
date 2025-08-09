@@ -29,7 +29,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
       <h2 className="text-2xl sm:text-3xl font-bold text-center text-[#4F46E5] mb-8 sm:mb-12">
         Frequently asked questions
       </h2>
@@ -38,29 +38,33 @@ const FAQ = () => {
         {faqData.map((item, index) => (
           <div
             key={index}
-            className="border border-gray-200 rounded-lg overflow-hidden transition-all duration-200"
+            className="border border-gray-200 rounded-lg overflow-hidden bg-[#FAF8FF] transition-shadow duration-200 hover:shadow-md"
           >
             <button
               onClick={() => toggleFAQ(index)}
-              className="w-full px-4 py-3 sm:px-6 sm:py-4 text-left flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-[#4F46E5] focus:ring-opacity-50 hover:bg-gray-50 transition-colors"
+              className="w-full px-4 py-3 sm:px-6 sm:py-4 text-left flex items-center justify-between focus:outline-none"
               aria-expanded={openIndex === index}
               aria-controls={`faq-answer-${index}`}
             >
-              <h3 className="text-base sm:text-lg font-medium text-gray-900 pr-2 sm:pr-4">
+              <h3
+                className={`text-base sm:text-lg font-medium pr-2 sm:pr-4 ${
+                  openIndex === index ? "text-[#4F46E5]" : "text-black"
+                }`}
+              >
                 {item.question}
               </h3>
               <div className="flex-shrink-0 ml-2">
                 {openIndex === index ? (
-                  <Minus className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
+                  <Minus className="w-5 h-5 text-gray-600" />
                 ) : (
-                  <Plus className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
+                  <Plus className="w-5 h-5 text-gray-600" />
                 )}
               </div>
             </button>
             <div
               id={`faq-answer-${index}`}
-              className={`px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out ${
-                openIndex === index ? "max-h-96 pb-4" : "max-h-0"
+              className={`px-4 sm:px-6 overflow-hidden transition-[max-height] duration-500 ease-in-out ${
+                openIndex === index ? "max-h-screen pb-4" : "max-h-0"
               }`}
             >
               <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
